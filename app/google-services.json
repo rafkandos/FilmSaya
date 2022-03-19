@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "36345670712",
+    "project_id": "filmsaya-256b7",
+    "storage_bucket": "filmsaya-256b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36345670712:android:d8595f55bdf48874decacd",
+        "android_client_info": {
+          "package_name": "com.raffli.filmsaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36345670712-i0mj01dnj71edtphfjq0kjp3gukj84i2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raffli.filmsaya",
+            "certificate_hash": "1f2c1f3d049a6a1ed6bc645d7b3e744532ab9437"
+          }
+        },
+        {
+          "client_id": "36345670712-lpscn3daqrhsf3l8n2uqudcho0g3cmlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASj_Rpcis2I0uQufbk29OrAInCYpv8L5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36345670712-lpscn3daqrhsf3l8n2uqudcho0g3cmlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
