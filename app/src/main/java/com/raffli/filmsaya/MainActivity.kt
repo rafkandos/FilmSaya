@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), RecyclerViewAdapter.dataListener {
     private var recyclerView: RecyclerView? = null
     private var adapter: RecyclerView.Adapter<*>? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
@@ -87,5 +87,25 @@ class MainActivity : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         recyclerView?.layoutManager = layoutManager
         recyclerView?.setHasFixedSize(true)
+    }
+
+    override fun onDeleteData(filmData: film_data?, position: Int) {
+        val getUserID: String = auth?.getCurrentUser()?.getUid().toString()
+        val getReference = db.getReference()
+        val getKey = filmData?.key.toString()
+        if(getReference != null){
+            getReference.child("Admin")
+                .child(getUserID)
+                .child("Film")
+                .child(getKey!!)
+                .removeValue()
+                .addOnSuccessListener {
+                    Toast.makeText(this@MainActivity, "Data Berhasil Dihapus", Toast.LENGTH_SHORT).show()
+                    finish()
+                }
+        }
+        else {
+            Toast.makeText(this@MainActivity, "Reference Kosong", Toast.LENGTH_SHORT).show();
+        }
     }
 }

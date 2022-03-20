@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FilmSaya">
         <activity
+            android:name=".UpdateFilmActivity"
+            android:exported="true"
+            android:label="@string/title_activity_update_film"
+            android:theme="@style/Theme.FilmSaya.NoActionBar" />
+        <activity
             android:name=".InsertFilmActivity"
             android:exported="true" />
         <activity
@@ -23,7 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
